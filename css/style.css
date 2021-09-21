@@ -8,6 +8,7 @@ body{
     height: 100vh;
     background: linear-gradient(to bottom,
     #009688 10px 150px, #d8dbd5 20px 60px);
+    font-family: 'Lato', sans-serif;
 }
 #container{
     display: flex;
@@ -25,7 +26,12 @@ body{
     justify-content: space-between;
     
 }
+.text_under{
+    text-decoration: underline;
+    color: #567f92;
+}
 .avatar-img {
+    margin: 0 15px;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -43,8 +49,9 @@ body{
     height: 70px;
     background-color:#eaeaea;
 }
-.header-left-icons i,.notification i{
+.header-left-icons i{
     padding-right: 15px;
+    color:#b1b1b1
 }
 .notification {
     background-color: #8edafc;
@@ -62,13 +69,17 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    margin: 0 15px;
+}
+.search{
+    /* width:100%; */
+}
+.search-input{
+    padding: 5px;
+    width:98%;
+    margin: 4px;
 }
 /* /COLUMN LEFT */
-
-
-
-
-
 
 .colum-right{
     width: 60%;
