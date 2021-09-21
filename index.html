@@ -34,12 +34,12 @@
         <!-- FAVICON  -->
     </head>
     <body>
-        <main>
+        <main id="root">
             <div id="container">
                 <div class="colum-left">
                     <header class="header-left">
                         <div class="avatar">
-                            <div class="avatar-img"></div>
+                            <img class="avatar-img" src="img/avatar_io.jpg" alt="io">
                             <div class="avatar-name">Nome Utente</div>
                         </div>
                         <div class="header-left-icons">
@@ -65,10 +65,25 @@
                         <input class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
                 
                     </section>
-
+                    <ul id="chats">
+                        <li v-for="contact in contacts"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" alt="">{{contact.name}}</li>
+                    </ul>
                 </div>
                 <div class="colum-right">
-
+                    <header class="header-left">
+                        <div class="avatar">
+                            <img class="avatar-img" src="img/avatar_io.jpg" alt="io">
+                            <div class="avatar-name">Nome Utente</div>
+                        </div>
+                        <div class="header-left-icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </header>
+                    <div id="chat-right">
+                        
+                    </div>
                 </div>
 
             </div>
@@ -79,7 +94,7 @@
 
         <!-- JAVASCRIPT -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <script src="js/contacts.js"></script>
+        <!-- <script src="js/contacts.js"></script> -->
         <script src="js/main.js"></script>
         <!--/ JAVASCRIPT -->
 

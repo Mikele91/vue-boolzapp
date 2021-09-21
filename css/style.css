@@ -14,7 +14,6 @@ body{
     display: flex;
     width: 80%;
     height: 90vh;
-    background-color: red; /*da eliminare*/
     margin:auto;
     margin-top: 50px;
     
@@ -35,17 +34,31 @@ body{
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-color: red;
+    /* background-color: red; */
 }
+#chats{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+#chats li{
+    padding: 6px 0;
+    border-top: 2px solid lightgray;
+    list-style-type: none;
+    display: flex; 
+}
+/*/ comon  */
 
 /* COLUMN LEFT */
 .colum-left{
+    display: flex;
+    flex-direction: column;
     width: 40%;
     height: 100%;
     background-color: white
 }
 
 .header-left{
+    border-right: 1px solid lightgray;
     height: 70px;
     background-color:#eaeaea;
 }
@@ -72,17 +85,25 @@ body{
     margin: 0 15px;
 }
 .search{
-    /* width:100%; */
+    padding: 6px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
 }
 .search-input{
     padding: 5px;
-    width:98%;
+    width:100%;
     margin: 4px;
 }
 /* /COLUMN LEFT */
 
 .colum-right{
+    display: flex;
+    flex-direction: column;
     width: 60%;
-    height: 100%;
-    background-color: blue;
+    /* height: 100%; */
+}
+#chat-right{
+    background-image: url("..css/img/mine.jpg");
+    flex-grow: 1;
 }
