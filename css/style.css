@@ -103,10 +103,18 @@ body{
     width: 60%;
     height: 100%;
 }
-#chat-right{
+.background-right{
+    height: 100%;
+    width: 100%;
     background-image: url("../img/mine.jpg");
-    flex-grow: 1;
     position: relative;
+}
+#chat-right{
+    height: 100%;
+    width: 100%; 
+    
+    flex-grow: 1;
+    overflow-y: auto;
 }
 .date{
     position: absolute;
