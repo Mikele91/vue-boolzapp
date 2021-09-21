@@ -106,6 +106,7 @@ body{
 #chat-right{
     background-image: url("../img/mine.jpg");
     flex-grow: 1;
+    position: relative;
 }
 .date{
     position: absolute;
@@ -132,4 +133,20 @@ body{
 .white{
     background-color: white;
 }
+.input-chat-right{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#eaeaea;
+    padding: 5px 0;
+}
+.input-chat-right input{
     
+    padding:12px;
+    width:70%;
+    border-radius: 10px ;
+    
+}
