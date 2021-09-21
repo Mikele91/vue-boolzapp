@@ -7,5 +7,71 @@
 body{
     height: 100vh;
     background: linear-gradient(to bottom,
-    #009688 10% 20%, #d8dbd5 20% 60%);
+    #009688 10px 150px, #d8dbd5 20px 60px);
+}
+#container{
+    display: flex;
+    width: 80%;
+    height: 90vh;
+    background-color: red; /*da eliminare*/
+    margin:auto;
+    margin-top: 50px;
+    
+}
+/* comon  */
+.avatar, .header-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.avatar-img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}
+
+/* COLUMN LEFT */
+.colum-left{
+    width: 40%;
+    height: 100%;
+    background-color: white
+}
+
+.header-left{
+    height: 70px;
+    background-color:#eaeaea;
+}
+.header-left-icons i,.notification i{
+    padding-right: 15px;
+}
+.notification {
+    background-color: #8edafc;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    padding-right: 50px ;
+}
+.circle{
+    background-color: white;
+    color :#8edafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* /COLUMN LEFT */
+
+
+
+
+
+
+.colum-right{
+    width: 60%;
+    height: 100%;
+    background-color: blue;
 }
