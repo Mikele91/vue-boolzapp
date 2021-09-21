@@ -101,9 +101,35 @@ body{
     display: flex;
     flex-direction: column;
     width: 60%;
-    /* height: 100%; */
+    height: 100%;
 }
 #chat-right{
-    background-image: url("..css/img/mine.jpg");
+    background-image: url("../img/mine.jpg");
     flex-grow: 1;
 }
+.date{
+    position: absolute;
+    bottom: 3px;
+    right: 15px;
+    text-align: right;
+    font-size: 8px;
+}
+.message-right{
+    margin: 20px;
+    text-align: right;
+}
+.green, .white{
+    position: relative;
+    background-color: #d5f9ba;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.message-left{
+    margin: 20px;
+    text-align: left;
+}
+.white{
+    background-color: white;
+}
+    
