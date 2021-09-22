@@ -62,7 +62,7 @@
                     </section>  
                     <section class="search">
                         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-                        <input class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
+                        <input v-model="searchText" v-on:keyup.enter="searchName()"class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
                 
                     </section>
                     <ul id="chats">

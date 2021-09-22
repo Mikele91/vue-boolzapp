@@ -87,12 +87,8 @@ const app = new Vue({
         guestContact :0, 
         newText:"",
         dataDelGiorno : "",
+        searchText:"",
 
-        // newMessage:{
-        //             date: '10/01/2020 15:50:00',
-        //             message: "",
-        //             status: 'sent'
-        // }
     },
     methods:{
         searchContact : function(index){
@@ -107,7 +103,13 @@ const app = new Vue({
             
             return dateTime;
         },
-        
+        searchName:function(){
+            this.contacts.forEach(element => {
+                if(element.name.includes(this.searchText)){
+                    console.log(element.name);
+                }
+            });
+        },
         sentMessage : function(){
             let dataDelGiorno = this.currentDateTime()
             newMessage = {
@@ -127,7 +129,9 @@ const app = new Vue({
                 }
                 this.contacts[this.guestContact].messages.push(answerMessage)
                 },1000);
-        }
+        },
+        
+        
     }
 })
 
