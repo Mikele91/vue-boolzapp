@@ -131,11 +131,10 @@ body{
 }
 .sent span, .received span{
     width: 18.75rem;
-    display: inline-block;
+    display: inline-block; 
     position: relative;
     background-color: #d5f9ba;
     padding: .625rem .9375rem;
-    margin: .625rem;
     border-radius: 1.25rem;
 }
 .received{

@@ -73,8 +73,8 @@
                 <div class="colum-right">
                     <header class="header-left">
                         <div class="avatar">
-                            <img class="avatar-img" src="img/avatar_io.jpg" alt="io">
-                            <div class="avatar-name">Nome Utente</div>
+                            <img class="avatar-img" :src="'img/avatar'+contacts[guestContact].avatar+'.jpg'" alt="io">
+                            <div class="avatar-name">{{contacts[guestContact].name}}</div>
                         </div>
                         <div class="header-left-icons">
                             <i class="fas fa-search"></i>
