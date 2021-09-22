@@ -62,12 +62,12 @@
                     </section>  
                     <section class="search">
                         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-                        <input v-model="searchText" v-on:input="searchName()"class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
+                        <input v-model="searchText"  v-on:input="searchName()"class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
                 
                     </section>
                     <ul id="chats">
                         
-                        <li v-for="(contact, index) in contacts" :key="index" @click="searchContact(index)"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
+                        <li v-if="contact.visible" v-for="(contact, index) in contacts" :key="index" @click="searchContact(index)"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
                     </ul>
                 </div>
                 <div class="colum-right">

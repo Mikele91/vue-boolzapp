@@ -88,7 +88,7 @@ const app = new Vue({
         newText:"",
         dataDelGiorno : "",
         searchText:"",
-
+        
     },
     methods:{
         searchContact : function(index){
@@ -105,8 +105,14 @@ const app = new Vue({
         },
         searchName:function(){
             this.contacts.forEach(element => {
+                let x=this.visible
                 if(element.name.includes(this.searchText)){
+                    element.visible = true;
                     console.log(element.name);
+                    
+                }else{
+                    element.visible = false;
+
                 }
             });
         },
