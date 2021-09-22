@@ -83,10 +83,13 @@ const app = new Vue({
                 ],
             },
         ],  
+        guestContact :0, 
     },
     methods:{
-        mesGreen: function(elm){
-            return this.contacts.messages= elm;
+        searchContact : function(index){
+            this.guestContact = index;
+            return this.guestContact
+
         }
     }
 })

@@ -116,29 +116,35 @@ body{
     overflow-y: auto;
 }
 .date{
+
     position: absolute;
     bottom: .1875rem;
     right: .9375rem;
     text-align: right;
     font-size: .5rem;
 }
-.message-right{
-    margin: 1.25rem;
+.sent{
+    
+    margin: 2rem;
     text-align: right;
 
 }
-.green, .white{
+.sent span, .received span{
+    width: 18.75rem;
+    display: inline-block;
     position: relative;
     background-color: #d5f9ba;
     padding: .625rem .9375rem;
     margin: .625rem;
     border-radius: 1.25rem;
 }
-.message-left{
+.received{
     margin: 1.25rem;
+    margin: 2rem;
+
 
 }
-.white{
+.received span{
     background-color: white;
 }
 .input-chat-right{
@@ -152,9 +158,7 @@ body{
     padding: .3125rem 0;
 }
 .input-chat-right input{
-    
     padding:.75rem;
     width:70%;
-    border-radius: .625rem ;
-    
+    border-radius: .625rem; 
 }

@@ -67,7 +67,7 @@
                     </section>
                     <ul id="chats">
                         
-                        <li v-for="(contact, index) in contacts" :key="index"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
+                        <li v-for="(contact, index) in contacts" :key="index" @click="searchContact(index)"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
                     </ul>
                 </div>
                 <div class="colum-right">
@@ -85,20 +85,13 @@
                     <div class="background-right">
 
                         <div id="chat-right">
-                            <div v-for="contact in contacts[0].messages" class="message">
-                                <div class="message-right">
-                                    <span class="green">
+                            <div v-for="contact in contacts[guestContact].messages" class="message" :class="contact.status">
+                                <div class="message.status">
+                                    <span>
                                         {{contact.message}}
-                                        <div class="date">10/01/2021 16:15:22 </div>
+                                        <div class="date">{{contact.date}} </div>
                                     </span>
                                 </div>
-                                <div class="message-left">
-                                    <span class="white">
-                                        non ancora
-                                        <span class="date">orario pppp </span>
-                                    </span>
-                                </div>
-
                             </div>
                             
                         </div>
