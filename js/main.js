@@ -95,9 +95,8 @@ const app = new Vue({
             this.guestContact = index;
             return this.guestContact
         },
-        sentMessage : function(elm){
-            this.newMessage.message = elm;
-            return this.newMessage.message
+        sentMessage : function(){
+            this.contacts[guestContact].messages.push(this.newMessage);
         }
     }
 })

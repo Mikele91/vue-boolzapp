@@ -98,7 +98,7 @@
                         
                         <div class="input-chat-right">
                             <i class="far fa-smile"></i>
-                            <input  v-on:keyup.enter="sentMessage(elm)" type="text">
+                            <input v-model="newMessage.message" v-on:keyup.enter="sentMessage()" type="text">
                             <i class="fas fa-microphone"></i>
                         </div>
                     </div>
