@@ -83,12 +83,14 @@ const app = new Vue({
                 ],
             },
         ],  
+        newMessage:"",
         guestContact :0, 
-        newMessage:{
-                    date: '10/01/2020 15:50:00',
-                    message: "",
-                    status: 'received'
-        }
+        newText:"",
+        // newMessage:{
+        //             date: '10/01/2020 15:50:00',
+        //             message: "",
+        //             status: 'sent'
+        // }
     },
     methods:{
         searchContact : function(index){
@@ -96,7 +98,14 @@ const app = new Vue({
             return this.guestContact
         },
         sentMessage : function(){
-            this.contacts[guestContact].messages.push(this.newMessage);
+            newMessage = {
+                date: '10/01/2020 15:50:00',
+                message: "",
+                status: 'sent'
+            }
+            newMessage.message= this.newText;
+            this.contacts[this.guestContact].messages.push(newMessage);
+            
         }
     }
 })
