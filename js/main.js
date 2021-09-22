@@ -86,6 +86,8 @@ const app = new Vue({
         newMessage:"",
         guestContact :0, 
         newText:"",
+        dataDelGiorno : "",
+
         // newMessage:{
         //             date: '10/01/2020 15:50:00',
         //             message: "",
@@ -97,15 +99,34 @@ const app = new Vue({
             this.guestContact = index;
             return this.guestContact
         },
+        currentDateTime() {
+            const current = new Date();
+            const date = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+current.getDate();
+            const time = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+            const dateTime = date +' '+ time;
+            
+            return dateTime;
+        },
+        
         sentMessage : function(){
+            let dataDelGiorno = this.currentDateTime()
             newMessage = {
-                date: '10/01/2020 15:50:00',
+                date: dataDelGiorno,
                 message: "",
                 status: 'sent'
             }
             newMessage.message= this.newText;
             this.contacts[this.guestContact].messages.push(newMessage);
-            
+            this.newText=""; 
+
+            setTimeout(()=>{ 
+                answerMessage = {
+                    date: dataDelGiorno,
+                    message: "ok",
+                    status: 'received'
+                }
+                this.contacts[this.guestContact].messages.push(answerMessage)
+                },1000);
         }
     }
 })
