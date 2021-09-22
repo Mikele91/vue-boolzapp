@@ -82,9 +82,12 @@ const app = new Vue({
                     }
                 ],
             },
-        ],
-        
-        
+        ],  
+    },
+    methods:{
+        mesGreen: function(elm){
+            return this.contacts.messages= elm;
+        }
     }
 })
 

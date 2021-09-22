@@ -66,7 +66,8 @@
                 
                     </section>
                     <ul id="chats">
-                        <li v-for="contact in contacts"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" alt="">{{contact.name}}</li>
+                        
+                        <li v-for="(contact, index) in contacts" :key="index"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
                     </ul>
                 </div>
                 <div class="colum-right">
@@ -84,17 +85,20 @@
                     <div class="background-right">
 
                         <div id="chat-right">
-                            <div class="message-right">
-                                <span class="green">
-                                    hai finito l'esercizio ??
-                                    <div class="date">orario </div>
-                                </span>
-                            </div>
-                            <div class="message-left">
-                                <span class="white">
-                                    non ancora
-                                    <span class="date">orario pppp </span>
-                                </span>
+                            <div v-for="contact in contacts[0].messages" class="message">
+                                <div class="message-right">
+                                    <span class="green">
+                                        {{contact.message}}
+                                        <div class="date">10/01/2021 16:15:22 </div>
+                                    </span>
+                                </div>
+                                <div class="message-left">
+                                    <span class="white">
+                                        non ancora
+                                        <span class="date">orario pppp </span>
+                                    </span>
+                                </div>
+
                             </div>
                             
                         </div>
