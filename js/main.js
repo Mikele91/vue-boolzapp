@@ -84,12 +84,20 @@ const app = new Vue({
             },
         ],  
         guestContact :0, 
+        newMessage:{
+                    date: '10/01/2020 15:50:00',
+                    message: "",
+                    status: 'received'
+        }
     },
     methods:{
         searchContact : function(index){
             this.guestContact = index;
             return this.guestContact
-
+        },
+        sentMessage : function(elm){
+            this.newMessage.message = elm;
+            return this.newMessage.message
         }
     }
 })
