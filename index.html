@@ -87,8 +87,13 @@
                         <div id="chat-right">
                             <div v-for="(contact, key) in contacts[guestContact].messages" :key="key" class="message" :class="contact.status">
                                 <div class="message.status">
+                                    
                                     <span>
                                         {{contact.message}}
+                                        <div v-if="info_visible.vibile == true && info_visible.index == key" class="info-message">
+                                            <div>Elimina messaggio</div>
+                                            <div>info messaggio</div>
+                                        </div>
                                         <div class="date">{{contact.date}} </div>
                                     </span>
                                 </div>

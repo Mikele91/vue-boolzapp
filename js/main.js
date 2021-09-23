@@ -88,16 +88,19 @@ const app = new Vue({
         newText:"",
         dataDelGiorno : "",
         searchText:"",
-        
+        info_visible: {
+            visible: false,
+            key: null
+            }
     },
     methods:{
-        searchContact : function(index){
+            searchContact : function(index){
             this.guestContact = index;
             return this.guestContact
         },
         currentDateTime() {
             const current = new Date();
-            const date = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+current.getDate();
+            const date = current.getFullYear()+'/'+(current.getMonth()+1)+'/'+current.getDate();
             const time = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
             const dateTime = date +' '+ time;
             

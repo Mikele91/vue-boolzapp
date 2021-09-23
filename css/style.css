@@ -34,7 +34,6 @@ body{
     border-radius: 50%;
     height: 3.125rem;
     width: 3.125rem;
-    /* background-color: red; */
 }
 #chats{
     flex-grow: 1;
@@ -48,6 +47,19 @@ body{
 }
 .active {
     background-color: lightgray;
+}
+.message{
+    position: relative;
+}
+.info-message{
+    z-index: 1;
+    position:absolute;
+    top: 100%;  /* position the top  edge of the element at the middle of the parent */
+    left: 100%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-90%, -10%); 
+    display:inline-block ;
+    background-color: white;
+    padding: 1.875rem;
 }
 /*/ comon  */
 
