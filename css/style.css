@@ -46,6 +46,9 @@ body{
     list-style-type: none;
     display: flex; 
 }
+.active {
+    background-color: lightgray;
+}
 /*/ comon  */
 
 /* COLUMN LEFT */
