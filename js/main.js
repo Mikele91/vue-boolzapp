@@ -88,7 +88,7 @@ const app = new Vue({
         newText:"",
         dataDelGiorno : "",
         searchText:"",
-        info_visbile: {
+        info_visible: {
             visible: false,
             key: null
             }
