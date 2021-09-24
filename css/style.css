@@ -69,7 +69,9 @@ body{
     flex-direction: column;
     width: 40%;
     height: 100%;
-    background-color: white
+    background-color: white;
+    
+    
 }
 
 .header-left{
@@ -119,10 +121,9 @@ body{
     height: 100%;
 }
 .background-right{
-    height: 100%;
+    height: calc( 100% - 8.75rem);
     width: 100%;
     background-image: url("../img/mine.jpg");
-    position: relative;
 }
 #chat-right{
     height: 100%;
@@ -162,8 +163,7 @@ body{
     background-color: white;
 }
 .input-chat-right{
-    position: absolute;
-    bottom: 0;
+    height: 4.375rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
