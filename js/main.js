@@ -130,6 +130,7 @@ const app = new Vue({
             this.newMessage.message= this.newText;
             this.contacts[this.guestContact].messages.push(this.newMessage);
             this.newText=""; 
+        
 
             setTimeout(()=>{ 
                 answerMessage = {
@@ -147,6 +148,9 @@ const app = new Vue({
         deleteMes:function(index){
             let messages =  this.contacts[this.guestContact].messages;
             messages.splice(index, 1) ;
+            this.info_visible.visible = false
+            this.info_visible.key = null
+            
         }  
     },
     // update() {
