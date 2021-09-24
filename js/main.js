@@ -97,7 +97,7 @@ const app = new Vue({
     methods:{
             searchContact : function(index){
             this.guestContact = index;
-            this.info_visible.key = null;
+            this.info_visible.visible = false;
             return this.guestContact
         },
         currentDateTime() {
@@ -130,7 +130,8 @@ const app = new Vue({
             this.newMessage.message= this.newText;
             this.contacts[this.guestContact].messages.push(this.newMessage);
             this.newText=""; 
-        
+            this.info_visible.visible = false;
+            this.info_visible.key = null;
 
             setTimeout(()=>{ 
                 answerMessage = {
@@ -145,12 +146,11 @@ const app = new Vue({
             this.info_visible.visible = true;
             this.info_visible.key = key;
         },
-        deleteMes:function(index){
+        deleteMes:function(key){
             let messages =  this.contacts[this.guestContact].messages;
-            messages.splice(index, 1) ;
-            this.info_visible.visible = false
-            this.info_visible.key = null
-            
+            messages.splice(key, 1) ;
+            this.info_visible.visible = false;
+            this.info_visible.key = null;  
         }  
     },
     // update() {
