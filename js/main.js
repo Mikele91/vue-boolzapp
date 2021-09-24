@@ -88,7 +88,7 @@ const app = new Vue({
         newText:"",
         dataDelGiorno : "",
         searchText:"",
-        statusOnline:"",
+        // statusOnline:this.contacts[this.guestContact].this.messages[this.messages.length - 1].this.date,
         info_visible: {
             visible: false,
             key: null
@@ -139,7 +139,8 @@ const app = new Vue({
                     message: "ok",
                     status: 'received'
                 }
-                this.contacts[this.guestContact].messages.push(answerMessage)
+                this.contacts[this.guestContact].messages.push(answerMessage);
+                // this.statusOnline=contacts[guestContact].messages[messages.length-1].dataDelGiorno;
                 },1000);
         },
         showInfo:function(key){

@@ -65,7 +65,7 @@
                         <input v-model="searchText"  v-on:input="searchName()"class="search-input" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat" style="font-family:Arial, FontAwesome" /> 
                 
                     </section>
-                    <ul id="chats">
+                    <ul id="chats" >
                         
                         <li v-if="contact.visible" v-for="(contact, index) in contacts" :class="index == guestContact ? 'active' : null" :key="index" @click="searchContact(index)"><img class="avatar-img" :src="'img/avatar'+ contact.avatar+'.jpg'" :alt="contact.name">{{contact.name}}</li>
                     </ul>
@@ -88,7 +88,7 @@
                     </header>
                     <div class="background-right"> 
 
-                        <div id="chat-right">
+                        <div id="chat-right" v-chat-scroll="{always: false, smooth: true}">
                             <div @click="showInfo(key)" v-for="(contact, key) in contacts[guestContact].messages" :key="key" class="message" :class="contact.status">
                                 <div class="message.status">
                                     <span>
@@ -126,7 +126,9 @@
 
         <!-- JAVASCRIPT -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <!-- <script src="js/contacts.js"></script> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/vue-chat-scroll/dist/vue-chat-scroll.min.js"></script>
+
         <script src="js/main.js"></script>
         <!--/ JAVASCRIPT -->
 
