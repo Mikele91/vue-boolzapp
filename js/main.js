@@ -88,6 +88,7 @@ const app = new Vue({
         newText:"",
         dataDelGiorno : "",
         searchText:"",
+        statusOnline:"",
         info_visible: {
             visible: false,
             key: null
@@ -96,11 +97,12 @@ const app = new Vue({
     methods:{
             searchContact : function(index){
             this.guestContact = index;
+            this.info_visible.key = null;
             return this.guestContact
         },
         currentDateTime() {
             const current = new Date();
-            const date = current.getFullYear()+'/'+(current.getMonth()+1)+'/'+current.getDate();
+            const date = current.getDate()+'/'+(current.getMonth()+1)+'/'+current.getFullYear();
             const time = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
             const dateTime = date +' '+ time;
             
@@ -120,13 +122,13 @@ const app = new Vue({
         },
         sentMessage : function(){
             let dataDelGiorno = this.currentDateTime()
-            newMessage = {
+            this.newMessage = {
                 date: dataDelGiorno,
                 message: "",
                 status: 'sent'
             }
-            newMessage.message= this.newText;
-            this.contacts[this.guestContact].messages.push(newMessage);
+            this.newMessage.message= this.newText;
+            this.contacts[this.guestContact].messages.push(this.newMessage);
             this.newText=""; 
 
             setTimeout(()=>{ 
@@ -138,9 +140,20 @@ const app = new Vue({
                 this.contacts[this.guestContact].messages.push(answerMessage)
                 },1000);
         },
-        
-        
-    }
+        showInfo:function(key){
+            this.info_visible.visible = true;
+            this.info_visible.key = key;
+        },
+        deleteMes:function(index){
+            let messages =  this.contacts[this.guestContact].messages;
+            messages.splice(index, 1) ;
+        }  
+    },
+    // update() {
+    //     var objDiv= {
+
+    //     }
+    // }
 })
 
 

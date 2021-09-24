@@ -73,8 +73,12 @@
                 <div class="colum-right">
                     <header class="header-left">
                         <div class="avatar">
-                            <img class="avatar-img" :src="'img/avatar'+contacts[guestContact].avatar+'.jpg'" alt="io">
-                            <div class="avatar-name">{{contacts[guestContact].name}}</div>
+                            <img class="avatar-img" :src="'img/avatar'+contacts[guestContact].avatar+'.jpg'" alt="io"> 
+                            <div class="avatar-name">{{contacts[guestContact].name}}
+                                <div>Ultimo accesso {{statusOnline}} </div>
+                            </div>
+                            
+                            
                         </div>
                         <div class="header-left-icons">
                             <i class="fas fa-search"></i>
@@ -85,13 +89,12 @@
                     <div class="background-right"> 
 
                         <div id="chat-right">
-                            <div v-for="(contact, key) in contacts[guestContact].messages" :key="key" class="message" :class="contact.status">
+                            <div @click="showInfo(key)" v-for="(contact, key) in contacts[guestContact].messages" :key="key" class="message" :class="contact.status">
                                 <div class="message.status">
-                                    
                                     <span>
                                         {{contact.message}}
                                         <div  v-if="info_visible.visible == true && info_visible.key == key" class="info-message">
-                                            <div>Elimina messaggio</div>
+                                            <div @click="deleteMes(key)" >Elimina messaggio</div>
                                             <div>info messaggio</div>
                                         </div>
                                         <div class="date">{{contact.date}} </div>
