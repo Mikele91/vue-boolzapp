@@ -54,12 +54,16 @@ body{
 .info-message{
     z-index: 1;
     position:absolute;
-    top: 100%;  /* position the top  edge of the element at the middle of the parent */
-    left: 100%; /* position the left edge of the element at the middle of the parent */
+    top: 100%;  
+    left: 100%; 
     transform: translate(-90%, -10%); 
     display:inline-block ;
     background-color: white;
     padding: 1.875rem;
+}
+.info-message  div{
+    margin: .3125rem 0;
+
 }
 /*/ comon  */
 

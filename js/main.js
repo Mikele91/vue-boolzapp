@@ -143,21 +143,24 @@ const app = new Vue({
                 },1000);
         },
         showInfo:function(key){
-            this.info_visible.visible = true;
-            this.info_visible.key = key;
+            if( this.info_visible.visible != true){
+                
+                this.info_visible.visible = true;
+                this.info_visible.key = key;
+            }else{
+                this.info_visible.visible = false;
+                this.info_visible.key = null;
+            }
         },
         deleteMes:function(key){
             let messages =  this.contacts[this.guestContact].messages;
             messages.splice(key, 1) ;
-            this.info_visible.visible = false;
-            this.info_visible.key = null;  
-        }  
+            // this.info_visible.visible = false;
+            // this.info_visible.key = null; 
+            // console.log(this.info_visible.key);
+            // console.log(this.info_visible.visible);
+            } 
     },
-    // update() {
-    //     var objDiv= {
-
-    //     }
-    // }
 })
 
 
